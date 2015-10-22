@@ -154,6 +154,7 @@ input {
     width: 288px;
     height: 195px;
     position: relative;
+    padding-bottom: 10vh;
 }
 
 #ha_1, #ha_2, #ha_3, #ha_4, #ha_5, 
@@ -3152,7 +3153,7 @@ input {
 			    <div id="ha_47">Loading</div>
 			</div>
 
-			<p class="comeBack" id='result' style="display: none;">You've been matched with: </p>
+			<p class="comeBack" id='matchResult' style="display: none;">You've been matched with: </p>
 
 			<input type="submit" class='logout' value="Paul (logout)" onclick="deAuth()">
 		</div>
@@ -3252,7 +3253,7 @@ input {
 			//hide loading el
 			$('#ha_holder').hide();
 			//show result el
-			$('#result').show();
+			$('#matchResult').show();
 		},3000);
 	}
 
