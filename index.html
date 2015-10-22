@@ -1,0 +1,296 @@
+<html>
+<head>
+	<title>Inter-Christian Junior Varsity Denominated Online Intentional Fellowship Service</title>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link type="image/png" rel="icon" href="img/beach.jpg">
+<style>
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 48pt;
+	font-weight: 300;
+	background-color: #f1f1f1;
+}
+
+.headline {
+	padding-left: 10vw;
+	padding-right: 10vw;
+	padding-top: 10vh;
+	color: white;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+
+.jumbo {
+	width: 100vw;
+	height: 70vh;
+	background-color: rgba(0,0,200,0.7);
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.videoDiv {
+
+}
+
+.video {
+	position: absolute;
+	top: 50vh;
+	left: 25vw;
+	border: 0px;
+	padding: 0px;
+	width: 50vw;
+	height: 50vh;
+	box-shadow: 7px 7px 7px #343434;
+}
+
+.buttonDiv {
+	margin-top: 40vh;
+	margin-bottom: 15vh;
+}
+
+.fbButton {
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px;
+	padding: 0px;
+	width: 320px;
+	height: 69px;
+	background-image:url(http://i.imgur.com/7M5Jo5K.png);
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 36pt;
+}
+
+.testimonial {
+	padding-top: 10vh;
+	padding-left: 10vw;
+	padding-bottom: 10vh;
+	background-color: rgba(0,0,200,0.55);
+	color: white;
+}
+
+.quote {
+	font-size: 24pt;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.attributionDiv {
+	margin-right: 5vw;
+	text-align: right;
+}
+
+.attribution {
+	font-size: 24pt;
+}
+
+.usernameDiv {
+	position: absolute;
+	top: 40vh;
+	left: 30vw;
+}
+
+input {
+	font-size: 32pt;
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 8px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	font-family: Roboto, Arial;
+	color: rgb(216, 116, 67);
+}
+
+.thanksDiv {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	color: rgb(216, 116, 67);
+}
+
+.comeBackDiv {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	color: rgb(216,116,67);
+}
+
+#usernameSubmit{
+	cursor: pointer;
+}
+
+.at4-share-title{
+	font-size: 12pt;
+}
+
+.logout {
+	margin-bottom: 10vh;
+	cursor: pointer;
+	color: rgba(250,0,0,0.7);
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 8px;
+	border-color: rgba(250,0,0,0.7);
+	padding: 8px 8px 8px 8px;
+}
+
+</style>
+
+</head>
+<body>
+	<div class='loggedOut'>
+		<div class='jumbo center'>
+			<p class='headline'>Inter-Christian Junior Varsity Denominated Online Intentional Fellowship Service</p>
+		</div>
+
+		<div class='videoDiv center'>
+			<img class='video' src="img/beach.jpg" />
+			<iframe class='video' id="videoTron" src="https://www.youtube.com/embed/0bXBTI5HkHc?controls=1&disablekb=1&iv_load_policy=3&loop=1&modestbranding=1&enablejsapi=1&showinfo=0&html5=1"></iframe>
+		</div>
+
+		<div class='buttonDiv center'>
+			<button type='button' onclick='fbookAuth()' class='fbButton'></button>
+		</div>
+		<div class='testimonial'>
+			<h1>Testimonials</h1>
+			<p class='quote'><i>"I'm worried" - Kathy Lu</i></p>
+			<p class='quote'><i>"This is my appreciation quote" - Aaron Bowen</i></p>
+			<p class='quote'><i>"Life is like jello" - Norman Young</i></p>
+			<p class='quote'><i>"Quote on what?" - Phil Chen</i></p>
+			<p class='quote'><i>"So much pressure" - Steven Lin</i></p>
+
+
+		</div>
+
+
+		<div class='attributionDiv'>
+			<p class='attribution'>brought to you by <a href='https://www.facebook.com/eggsoformul'>Eggs of Ormul</a></p>
+			<p class='attribution'>For inquiries: <a href="mailto:eggsoformul@gmail.com">eggsoformul@gmail.com</a></p>
+		</div>
+	</div>
+	<div class="loggedIn" style="display: none;">
+      	<div class="jumbo center">
+  			<p class="headline">Set up your account</p>
+      </div>
+		<div class="usernameDiv">
+			<input type="text" id="usernameInput" placeholder="Choose a username">
+			<input type="submit" id="usernameSubmit" onclick="submitUsername()">
+		</div>
+		<div class="thanksDiv" style="display: none;">
+			<p class="thanks">Thanks for completing the sign up!</p>
+		</div>
+		<div class="comeBackDiv center" style="display: none;">
+			<p class="comeBack">You're all set for now</p>
+			<p class="comeBack">Visit us on Oct 22nd for our full feature release!</p>
+			<input type="submit" class='logout' value="Paul (logout)" onclick="deAuth()">
+		</div>
+	</div>
+
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-561d252eb5c08f6d" async="async"></script>
+	<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		var user;
+		var userID;
+		var stampRef;
+		var nameRef;
+		var usernameRef;
+
+		var myRef = new Firebase("https://icjvdoifs.firebaseio.com/");
+
+		// var authClient = new FirebaseSimpleLogin(myRef, function(error, user) {
+		//     if (error) {
+		//       // an error occurred while attempting login
+		//       console.log(error);
+		//     } else if (user) {
+		//       // user authenticated with Firebase
+		//       userRef = user;
+		//       userID = user.uid;
+		//       stampRef = new Firebase('https://icjvdoifs.firebaseio.com/userTimes/'+userID);
+		//       nameRef = new Firebase('https://icjvdoifs.firebaseio.com/userNames/'+userID);
+		//       nameRef.set(user.displayName);
+		//       console.log("User ID: " + user.uid + ", Provider: " + user.provider);
+		//     } else {
+		//       // user is logged out
+		//     }
+		// });
+
+		function fbookAuth() {
+			myRef.authWithOAuthPopup("facebook", function(error, authData) {
+				if (error) {
+					console.log("Login Failed!", error);
+				} else {
+					console.log("Authenticated successfully with payload:", authData);
+					user = authData;
+					userID = authData.uid;
+					stampRef = new Firebase("https://icjvdoifs.firebaseio.com/userTimes/"+userID);
+					nameRef = new Firebase("https://icjvdoifs.firebaseio.com/userNames/"+userID+"/name");
+					usernameRef = new Firebase("https://icjvdoifs.firebaseio.com/userNames/"+userID+"/username");
+					nameRef.set(authData.facebook.displayName);
+					console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
+				}
+			});
+		}
+
+
+
+	myRef.onAuth(function(snap) {
+		$(document).ready(function() {
+			if (snap) {
+				console.log("uid is"+snap.uid);
+				var unRef = new Firebase("https://icjvdoifs.firebaseio.com/userNames/"+snap.uid+"/username");
+
+				//check if username already set
+				unRef.on("value", function(snapshot) {
+					if(snapshot.val()) {
+  						console.log("name is "+snapshot.val());
+  						showLaterMessage();
+					} else {
+						console.log("no username found");
+					}
+				});
+
+				console.log("logged in");
+				$(".loggedOut").hide();
+				$(".loggedIn").show();
+				$(".regInput").show(); 
+
+			} else {
+				console.log("not logged in");
+				$(".loggedIn").hide();
+				$(".loggedOut").show();
+				$(".regInput").hide();
+			}
+		});
+	});
+
+	function submitUsername() {
+		console.log("pressed");
+		usernameRef.set($("#usernameInput").val());
+		$(".usernameDiv").hide();
+		$(".thanksDiv").show();
+	}
+
+	function showLaterMessage() {
+		$(".usernameDiv").hide();
+		$(".comeBackDiv").show();
+	}
+
+	function deAuth() {
+		myRef.unauth();
+	}
+
+	</script>
+</body>
+</html>
