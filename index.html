@@ -150,11 +150,11 @@ input {
 
 #ha_holder
 {
-    margin: 0 auto;
+    margin: auto;
     width: 288px;
     height: 195px;
     position: relative;
-    padding-bottom: 10vh;
+    margin-bottom: 10vh;
 }
 
 #ha_1, #ha_2, #ha_3, #ha_4, #ha_5, 
@@ -3249,7 +3249,7 @@ input {
 	function showLaterMessage() {
 		$(".usernameDiv").hide();
 		$(".comeBackDiv").show();
-		setTimeOut(function(){
+		window.setTimeOut(function(){
 			//hide loading el
 			$('#ha_holder').hide();
 			//show result el
